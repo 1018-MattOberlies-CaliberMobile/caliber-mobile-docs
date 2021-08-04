@@ -1,0 +1,29 @@
+note {
+	noteID: string,
+	batchID: string,
+	noteContent: string,
+	technicalScore: 0 | 1 | 2 | 3 | 4,
+	associateID: string | undefined,
+	weekNumber: number,
+}
+
+batch {
+	batchID: string,
+	trainerID: user[],
+	startDate: string,
+	endDate: string,
+	batchTitle: string,
+	associateList: associate[],
+	notes: note[],
+}
+
+user {
+	userID: string,
+	role: Trainer | QC_Analyst | Admin,
+}
+
+associate {
+	associateID: string,
+	firstName: string,
+	lastName: string,
+}
